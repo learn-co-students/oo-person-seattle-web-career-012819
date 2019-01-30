@@ -6,7 +6,7 @@ class Person
     @name = name
     @bank_account = 25
     @happiness = 8
-    @hygiene = 8  
+    @hygiene = 8
   end
 
   def happiness=(val)
@@ -56,7 +56,7 @@ class Person
       person.happiness = person.happiness + 1
       self.happiness = @happiness + 1
       'blah blah sun blah rain'
-    else 
+    else
       'blah blah blah blah blah'
     end
   end
