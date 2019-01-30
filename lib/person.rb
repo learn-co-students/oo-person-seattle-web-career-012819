@@ -53,16 +53,8 @@ class Person
   end
 
   def start_conversation(speaker, topic)
-    delta_happy = 0
-    convo = "blah blah blah blah blah"
-    case topic
-    when "politics"
-      delta_happy = -2
-      convo = "blah blah partisan blah lobbyist"
-    when "weather"
-      delta_happy = 1
-      convo = "blah blah sun blah rain"
-    end
+    delta_happy = (topic=="politics") ? -2 : (topic=="weather") ? 1 : 0
+    convo = (topic=="politics") ? "blah blah partisan blah lobbyist" : (topic=="weather") ? "blah blah sun blah rain" : "blah blah blah blah blah"
     self.happiness += delta_happy
     speaker.happiness += delta_happy
     convo
